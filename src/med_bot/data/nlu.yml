@@ -1,0 +1,264 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you around
+      - see you later
+      - take care
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - sure
+      - ok
+      - yeah
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - not at all
+      - nope
+      - no thanks
+      - im good
+      - i don't think so
+      - im okay
+
+  - intent: ask_for_help
+    examples: |
+      - What can you do?
+      - What are you capable of?
+      - What are your functions?
+      - What can you help me with?
+      - What are your features?
+      - What are your abilities?
+      - What are your services?
+      - How can you help me?
+      - What can you assist me with?
+      - What can you provide me with?
+      - What can you offer me?
+      - What can you do for me?
+      - What can you give me?
+      - What can you tell me?
+      - What can you show me?
+      - Help
+      - How to use you?
+      - How do you work?
+      - How to start?
+      - How to begin?
+      - How to interact with you?
+      - What are your commands?
+      - What are your instructions?
+      - What to do?
+
+  - intent: ask_medical_info
+    examples: |
+      - What are the symptoms of [condition]?
+      - How do I treat [condition]?
+      - I have [symptom]
+      - Im having a [symptom]
+      - I think I have [condition]
+      - What should I do about [condition]?
+      - Can you tell me about [condition]?
+      - How do I know if I have [condition]?
+      - Who is at risk for [condition]?
+      - What are the causes of [condition]?
+      - What are the complications of [condition]?
+      - What are the treatments for [condition]?
+      - My [body part] hurts
+      - I have a [body part] ache
+      - I have a [body part] pain
+      - I have a [body part] injury
+      - I have a [body part] wound
+      - I have a [body part] cut
+      - I have a [body part] bruise
+      - I have a [body part] burn
+      - I have a [body part] rash
+      - I have a [body part] infection
+      - My [body part] is swollen
+      - My [body part] is red
+      - My [body part] is itchy
+      - My [body part] is painful
+      - My [body part] is sore
+      - My [body part] is injured
+      - My [body part] is wounded
+      - I am not feeling well
+      - I am feeling [symptom]
+      - I am experiencing [symptom]
+      - I am having [symptom]
+      - I am suffering from [symptom]
+      - I am in pain
+
+  - intent: ask_view_appointments
+    examples: |
+      - Can I view my appointment?
+      - Can I see my appointment?
+      - Can I check my appointment?
+      - Can I see my booking?
+      - Can I view my booking?
+      - Can I check my booking?
+      - Can I see my schedule?
+      - Can I view my schedule?
+      - Can I check my schedule?
+      - Can I see my appointment details?
+      - Can I view my appointment details?
+      - Can I check my appointment details?
+      - Can I see my booking details?
+      - Can I view my booking details?
+      - Can I check my booking details?
+      - Can I see my schedule details?
+      - Can I view my schedule details?
+      - Can I check my schedule details?
+      - Show me my appointments
+      - Show me my bookings
+      - Show me my schedule
+      - Show me my appointment details
+      - Show me my booking details
+      - Show me my schedule details
+      - View my appointments
+      - View my bookings
+      - View my schedule
+      - View my appointment details
+      - View my booking details
+      - View my schedule details
+      - Appointments
+      - Bookings
+      - Schedule
+      - Any appointments?
+      - Any bookings?
+      - Any schedule?
+      - Show appts
+      - Show me my upcoming appointments
+      - Show me my upcoming bookings
+      - Show me my upcoming schedule
+
+  - intent: ask_for_booking
+    examples: |
+      - Can you help me book an [appointment]?
+      - Can you book an [appointment] for me?
+      - Can you help me schedule an [appointment]?
+      - Can you schedule an [appointment] for me?
+      - Can you help me make an [appointment]?
+      - Can you make an [appointment] for me?
+      - Can you help me set an [appointment]?
+      - Can you set an [appointment] for me?
+      - Can you help me arrange an [appointment]?
+      - Can you arrange an [appointment] for me?
+      - Can you help me fix an [appointment]?
+      - Can you fix an [appointment] for me?
+      - Can you help me organize an [appointment]?
+      - Can you organize an [appointment] for me?
+      - Can you help me plan an [appointment]?
+      - Can you plan an [appointment] for me?
+      - Book an [appointment]
+      - Schedule an [appointment]
+      - Make an [appointment]
+      - Set an [appointment]
+      - Arrange an [appointment]
+      - Fix an [appointment]
+      - Organize an [appointment]
+      - Plan an [appointment]
+      - Book [appointment]
+      - Schedule [appointment]
+      - Make [appointment]
+      - Set [appointment]
+      - Arrange [appointment]
+      - Fix [appointment]
+      - Organize [appointment]
+      - Plan [appointment]
+      - I need a [appointment]
+      - I want a [appointment]
+      - I would like a [appointment]
+      - I need a [appointment] with [doctor]
+      - I need a [doctor]
+      - I want a [doctor]
+      - I would like a [doctor]
+      - I would like to see a [doctor]
+      - I would like to meet a [doctor]
+      - I would like to consult a [doctor]
+
+  - intent: ask_view_more_details
+    examples: |
+      - [1](appointment_id)
+      - [2](appointment_id)
+      - [3](appointment_id)
+      - [4](appointment_id)
+      - [5](appointment_id)
+      - show me details for [1](appointment_id)
+      - view appointment [2](appointment_id)
+      - check [3](appointment_id)
+      - details for [4](appointment_id)
+      - when is appointment [5](appointment_id)
+      - where is appointment [1](appointment_id)
+      - who is the doctor for [2](appointment_id)
+    
+  - intent: thank_you
+    examples: |
+      - thanks
+      - thank you
+      - appreciate it
+      - thanks a lot
+      - thank you very much
+      - thank you so much
+      - thanks a bunch
+
+  - intent: hospital_selected
+    examples: |
+      - [HOSPITAL_AH]
+      - [HOSPITAL_CGH]
+      - [HOSPITAL_KTPH]
+      - [HOSPITAL_KKH]
+      - [HOSPITAL_NUH]
+      - [HOSPITAL_NTFGH]
+      - [HOSPITAL_SKGH]
+      - [HOSPITAL_SGH]
+      - [HOSPITAL_TTSH]
+      - [HOSPITAL_WH]
+
+  - intent: provide_date_time
+    examples: |
+      - [2023-01-01 09:00:00]
+      - [2024-01-01 10:00:00]
+      - [2024-01-02 11:00:00]
+      - [2024-01-03 12:00:00]
+      - [2024-01-04 13:00:00]
+      - [2025-01-05 14:00:00]
+      - [2025-01-06 15:00:00]
+      - [2025-01-07 16:00:00]
+      - [2025-01-08 17:00:00]
+
+  - intent: on_fun_mode
+    examples: |
+      - turn on fun mode
+      - activate fun mode
+      - enable fun mode
+      - fun mode on
+      - fun mode activate
+      - fun mode enable
+
+  - intent: off_fun_mode
+    examples: |
+      - turn off fun mode
+      - deactivate fun mode
+      - disable fun mode
+      - fun mode off
+      - fun mode deactivate
+      - fun mode disable

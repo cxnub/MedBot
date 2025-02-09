@@ -1,0 +1,44 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say thank you
+    steps:
+      - intent: thank_you
+      - action: utter_thank_you
+
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: On fun mode
+    steps:
+      - intent: on_fun_mode
+      - action: action_on_fun_mode
+
+  - rule: Off fun mode
+    steps:
+      - intent: off_fun_mode
+      - action: action_off_fun_mode
+
+  - rule: Ask for help
+    steps:
+      - intent: ask_for_help
+      - action: action_help
+
+  - rule: Ask for booking
+    steps:
+      - intent: ask_for_booking
+      - action: utter_handle_appointment
+
+  - rule: NLU Fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_answer_with_llm
+
+  

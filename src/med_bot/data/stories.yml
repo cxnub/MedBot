@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+  - story: Medical query flow with booking
+    steps:
+      # User asks a medical query, answer with LLM
+      - intent: ask_medical_info
+      - action: action_answer_with_llm
+
+      # Ask if user wants to book an appointment
+      - action: utter_ask_booking
+
+      # User affirms, show hospital options
+      - intent: affirm
+      - action: utter_handle_appointment
+
+
+  - story: Medical query without booking
+    steps:
+      # User asks a medical query, answer with LLM
+      - intent: ask_medical_info
+      - action: action_answer_with_llm
+
+      # Ask if user wants to book an appointment
+      - action: utter_ask_booking
+
+      # User denies, end conversation
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: Show user appointments
+    steps:
+      # User asks to show appointments
+      - intent: ask_view_appointments
+      - action: action_show_appointments
+
+      # User choose to view more details
+      - intent: ask_view_more_details
+      - action: action_show_more_details
+

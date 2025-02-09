@@ -1,0 +1,70 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_medical_info
+  - provide_date_time
+  - thank_you
+  - on_fun_mode
+  - off_fun_mode
+  - ask_view_appointments
+  - ask_view_more_details
+  - ask_for_booking
+
+entities:
+  - appointment_id
+
+slots:
+  hospital:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: hospital
+
+  datetime:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: time
+
+  appointment_id:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: appointment_id
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you with your medical concerns today?"
+
+  utter_goodbye:
+    - text: "Take care, have a great day!"
+
+  utter_thank_you:
+    - text: "You're welcome!"
+
+  utter_ask_booking:
+    - text: "Would you like me to help you book a medical appointment?"
+
+  utter_handle_appointment:
+    - text: "handle_appointment"
+
+
+actions:
+  - action_help
+  - action_answer_with_llm
+  - action_handle_booking
+  - action_on_fun_mode
+  - action_off_fun_mode
+  - action_show_appointments
+  - action_show_more_details
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
